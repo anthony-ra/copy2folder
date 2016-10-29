@@ -2,5 +2,11 @@
 <settings>
     <category label="32001">
         <setting label="Select folder" type="folder" id="folder" source="auto" option="writeable"/>
+        <setting label="Empty list" type="action" action="RunScript(script.copy2folder, empty_list)"/>
+        <setting label="32030" type="date" id="last_file_date"  default="" visible="false"/>
+        <setting label="32031" type="time" id="last_file_time" default="" visible="false"/>
+    </category>
+    <category label="A propos">
+        <setting label="Usage" type="text" enable="false" value="Une description..."/>
     </category>
 </settings>

@@ -7,9 +7,19 @@ from resources.lib.utils import *
 
 bDidit = False
 myFolder = settings.getSetting('folder')
+
+# Init
+for arg in sys.argv[1:]:
+    if arg == "empty_list":
+        empty_list
+        xbmcgui.Dialog().ok(addonname, "List of movies is empty.")
+        sys.exit(0)
+
 if myFolder == "":
     xbmcgui.Dialog().ok(addonname, "You must define a folder in settings")
     sys.exit(0)
+
+init_app
 
 try:
     f = open(MOVIES_PATH, "r")

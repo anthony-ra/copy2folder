@@ -15,10 +15,11 @@ if __name__ == '__main__':
             f.write(filepathname + '\n')
             f.close()
             message = "Added to list '%s'" % sys.listitem.getLabel()
+            update_LastFileDateTime
         except Exception as e:
             message = "ERROR added to list '%s'" % sys.listitem.getLabel()
     else:
         message = "ERROR added to list '%s'" % sys.listitem.getLabel()
-        filepathname = "None"
+        filepathname = None
 
     xbmc.executebuiltin("Notification(\"" + message + "\", \"File: %s\")" % filepathname)

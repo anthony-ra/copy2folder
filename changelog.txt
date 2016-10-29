@@ -1,2 +1,2 @@
+1.0.1 Add Init app, add movies list file will remove after 4 hours
 1.0.0 Initial Release
-
